@@ -59,3 +59,5 @@ class Address {
     return `RoadNo: ${this[_roadNo]}, City: ${this[_city]}, Region: ${this[_region]}, PostalCode: ${this[_postalCode]}, Country: ${this[_country]}`;
   }
 }
+
+module.exports = Address;

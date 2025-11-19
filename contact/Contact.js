@@ -5,7 +5,7 @@ const _alternativePhone = Symbol("alternativePhone");
 const _address = Symbol("address");
 
 class Contact {
-  constructor(id, email, phone, alternativePhone, address) {
+  constructor({ id, email, phone, alternativePhone, address }) {
     this[_id] = id;
     this[_email] = email || "";
     this[_phone] = phone || "";
@@ -15,6 +15,9 @@ class Contact {
 
   get id() {
     return this[_id];
+  }
+  set id(value) {
+    this[_id] = value;
   }
 
   get email() {
@@ -34,18 +37,16 @@ class Contact {
   }
 
   get address() {
-    return this._address;
+    return this[_address];
   }
 
   set address(value) {
-    this._address = value;
+    this[_address] = value;
   }
 
   toString() {
-    return `Id: ${this[_id]}, Email: ${this[_email]}, Phone: ${
-      this[_phone]
-    }, Alternative Phone: ${this[_alternativePhone]}, Address: ${
-      this[_address] ? this[_address].toString() : "N/A"
-    }`;
+    return `Id: ${this[_id]}, Email: ${this[_email]}, Phone: ${this[_phone]}, Alternative Phone: ${this[_alternativePhone]}, Address: ${this[_address]}`;
   }
 }
+
+module.exports = Contact;

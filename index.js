@@ -1,20 +1,12 @@
-const Person = require("./person/Person");
-const Teacher = require("./Teacher");
-const Student = require("./person/Student");
+const { Guardian } = require("./person");
+const { Contact } = require("./contact");
 
-// const p1 = new Person("rahul", "rahul@gmail.com");
-const t1 = new Teacher("rahul", "rahul@gmail.com", "csc", "4000");
-const s1 = new Student(
-  "rahul",
-  "rahul@gmail.com",
-  ["math", "english", "cse"],
-  "2000000"
-);
+const guardian = new Guardian(1, "Alice Smith", "Engineer", 75000);
+guardian.blood = "A+";
+guardian.contact = new Contact({
+  id: 1,
+  email: "aliceswith@gmail.com",
+  phone: "3465345634563456",
+});
 
-// console.log(p1);
-// console.log(t1);
-// console.log(s1);
-
-console.log(t1);
-
-t1.print();
+console.log(guardian.toString());

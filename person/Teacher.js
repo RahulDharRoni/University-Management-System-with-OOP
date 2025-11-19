@@ -1,5 +1,4 @@
 const Employee = require("./Employee");
-const Person = require("./person/Person");
 
 const _subject = Symbol("subject");
 class Teacher extends Employee {

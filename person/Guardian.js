@@ -1,4 +1,5 @@
 const Person = require("./Person");
+
 const _profession = Symbol("profession");
 const _income = Symbol("income");
 
