@@ -26,30 +26,10 @@ This project is a University Management System built using Object-Oriented Progr
 | Subject      | Aggregates Person, Vehicle, and Injury |
 | Involved     | Connects a Subject to an Accident |
 
-## Project Structure
-
-```
-university-management-system/
-├── src/
-│   ├── models/
-│   │   ├── Address.js
-│   │   ├── Contact.js
-│   │   ├── Person.js
-│   │   ├── Description.js
-│   │   ├── Location.js
-│   │   ├── Accident.js
-│   │   ├── Vehicle.js
-│   │   ├── Injury.js
-│   │   ├── Subject.js
-│   │   └── Involved.js
-│   └── index.js
-├── README.md
-└── package.json
-```
 
 ## Example Usage
 
-```javascript
+```JavaScript
 const address = new Address("1", "123 Main St", "Atlanta", "GA", "30301");
 const contact = new Contact("1", "555-1234", "john@example.com", address);
 const person = new Person("1", "John", "Doe", new Date("1990-01-01"), address, contact);
