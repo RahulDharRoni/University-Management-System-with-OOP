@@ -45,10 +45,64 @@ department.subject = [
 ];
 
 const dean = new Teacher(1, "Dr. John Doe", department.subject[1]);
+dean.blood = "O+";
+dean.department = department;
+dean.salary = 120000;
+dean.employeeId = "EMP001";
+dean.designation = "Dean of Computer Science";
+dean.contact = new Contact({
+  id: 3,
+  email: "dr.johndoe@university.edu",
+  phone: "9876543210",
+  address: new Address({
+    id: 3,
+    roadNo: "456",
+    city: "Metropolis",
+    region: "NY",
+    country: "USA",
+    postalCode: "12345",
+  }),
+});
 department.dean = dean;
 
 const teacher1 = new Teacher(2, "Prof. Jane Smith", department.subject[1]);
+teacher1.blood = "AB+";
+teacher1.department = department;
+teacher1.salary = 90000;
+teacher1.employeeId = "EMP002";
+teacher1.designation = "Professor";
+teacher1.contact = new Contact({
+  id: 4,
+  email: "prof.janesmith@university.edu",
+  phone: "8765432109",
+  address: new Address({
+    id: 4,
+    roadNo: "789",
+    city: "Metropolis",
+    region: "NY",
+    country: "USA",
+    postalCode: "12345",
+  }),
+});
 const teacher2 = new Teacher(3, "Prof. Emily Davis", department.subject[2]);
+teacher2.blood = "A-";
+teacher2.department = department;
+teacher2.salary = 95000;
+teacher2.employeeId = "EMP003";
+teacher2.designation = "Associate Professor";
+teacher2.contact = new Contact({
+  id: 5,
+  email: "prof.emilydavis@university.edu",
+  phone: "7654321098",
+  address: new Address({
+    id: 5,
+    roadNo: "101",
+    city: "Metropolis",
+    region: "NY",
+    country: "USA",
+    postalCode: "12345",
+  }),
+});
 
 department.addTeacher(dean);
 department.addTeacher(teacher1);
@@ -64,4 +118,5 @@ const studentAllCredits = department.subject.reduce(
   (total, subj) => total + subj.credits,
   0
 );
-console.log("Total Credits in Department:", studentAllCredits);
+// console.log("Total Credits in Department:", studentAllCredits);
+console.log(dean.department);
